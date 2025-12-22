@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.httr-oauth
+.DS_Store
+.quarto
+*txt.gz
+*tsv.gz
+*bgz
+*tbi
+*bcf
+*csi
+coloclize*tar.gz

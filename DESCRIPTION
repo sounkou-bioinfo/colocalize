@@ -1,0 +1,26 @@
+Package: coloclize
+Title: Utility Functions For Colocalization Analyses
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Sounkou Mahamane", family = "Toure" ,  email = "sounkoutoure@gmail.com", role = c("aut", "cre"))
+Description: This package provides utility functions to facilitate colocalization analyses between GWAS and QTL summary statistics. It
+    includes utilities for data formating and harmonization, LD matrix computation, and visualization of colocalization results.
+Depends: R (>= 4.4.0)
+Import: coloc,
+    data.table,
+    dplyr,
+    ggplot2,
+    reticulate,
+    rix,
+    rmarkdown,
+    seqminer,
+    vroom,
+    vcfppR,
+    RBCFLib,
+    rmarkdown
+Suggests: tinytest
+Remotes: sounkou-bioinfo/RBCFLib
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3

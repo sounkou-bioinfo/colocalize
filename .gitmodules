@@ -1,0 +1,9 @@
+[submodule "FLAMES"]
+	path = FLAMES
+	url = https://github.com/Marijn-Schipper/FLAMES
+[submodule "inst/python/FLAMES"]
+	path = inst/python/FLAMES
+	url = https://github.com/Marijn-Schipper/FLAMES
+[submodule "inst/python/pops"]
+	path = inst/python/pops
+	url = https://github.com/FinucaneLab/pops
