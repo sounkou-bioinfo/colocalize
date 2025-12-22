@@ -1,0 +1,8 @@
+#!/bin/sh
+# download magma
+bash ./tools/getMagma.sh
+./inst/bin/magma/magma --version > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "Magma download or installation failed. Please check the getMagma.sh script."
+    exit 1
+fi

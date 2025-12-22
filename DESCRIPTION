@@ -17,8 +17,10 @@ Import: coloc,
     vroom,
     vcfppR,
     RBCFLib,
-    rmarkdown
+    rmarkdown,
+    bigsnpr
 Suggests: tinytest
+OS_type: unix
 Remotes: sounkou-bioinfo/RBCFLib
 License: GPL (>= 3)
 Encoding: UTF-8
