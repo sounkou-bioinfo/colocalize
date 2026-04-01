@@ -11,17 +11,13 @@ Import: coloc,
     dplyr,
     ggplot2,
     reticulate,
-    rix,
     rmarkdown,
-    seqminer,
+    Rduckhts( >= 1.1.4),
     vroom,
-    vcfppR,
-    RBCFLib,
     rmarkdown,
-    bigsnpr
+    condathis,
+    httr2
 Suggests: tinytest
-OS_type: unix
-Remotes: sounkou-bioinfo/RBCFLib
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
