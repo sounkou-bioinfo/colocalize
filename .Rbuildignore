@@ -22,3 +22,7 @@ coloclize.*tar.gz
 ^inst/python/pops/example/data/.*$
 ^inst/bin/*$
 ^inst/magma_v1/*.o$
+^\.github/.*$
+^_pkgdown\.yml$
+^docs$
+^_pkgdown$
