@@ -4,6 +4,8 @@
 #' @import vroom
 #' @import dplyr
 #' @import ggplot2
+#' @import httr2
+#' @import zen4R
 #' @import data.table
 #' @import rmarkdown
 #' @import S7

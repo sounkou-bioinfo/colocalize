@@ -11,12 +11,11 @@ Import: coloc,
     dplyr,
     ggplot2,
     reticulate,
-    rmarkdown,
     Rduckhts( >= 1.1.4),
     vroom,
     rmarkdown,
-    condathis,
-    httr2
+    httr2,
+    zen4R
 Suggests: tinytest
 License: GPL (>= 3)
 Encoding: UTF-8
