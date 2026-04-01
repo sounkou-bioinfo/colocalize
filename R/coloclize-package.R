@@ -1,16 +1,13 @@
 ## usethis namespace: start
 #' @import coloc
-#' @import seqminer
 #' @import reticulate
-#' @import rix
 #' @import vroom
 #' @import dplyr
 #' @import ggplot2
 #' @import data.table
 #' @import rmarkdown
 #' @import S7
-#' @import vcfppR
-#' @import RBCFLib
+#' @import Rduckhts
 ## usethis namespace: end
 NULL
 
@@ -19,7 +16,10 @@ NULL
 #' @return path to magma executable
 #' @export
 magma_exec <- function() {
-    system.file("bin", "magma", "magma", package = "coloclize", mustWork = TRUE)
+    if( .Platform$OS.type == "windows") {
+        return(system.file("bin", "magma.exe", package = "coloclize", mustWork = TRUE))
+    }
+    system.file("bin", "magma", package = "coloclize", mustWork = TRUE)
 }
 
 #' make pops python package venv
