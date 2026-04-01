@@ -2,7 +2,7 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^Makefile$
-^data-raw$
+^data-raw/.*$
 ^README\.Rmd$
 .Rproj.user
 .Rhistory
@@ -17,3 +17,8 @@
 .*bcf
 .*csi
 coloclize.*tar.gz
+^\.sync/.*$
+^\.coloclize\.Rcheck/.*
+^inst/python/pops/example/data/.*$
+^inst/bin/*$
+^inst/magma_v1/*.o$

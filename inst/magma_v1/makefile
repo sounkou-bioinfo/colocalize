@@ -1,5 +1,5 @@
 #C++ compiler
-CXX=g++
+CXX ?= g++
 
 #Flags for linker
 LD_FLAGS=
@@ -17,6 +17,8 @@ OBS=src/annotation.o src/baseinput.o src/baseinput_indiv.o src/baseinput_plinkin
 magma: $(OBS)
 	$(CXX) $(LD_FLAGS) -o magma $(OBS)
 
+magma.exe: $(OBS)
+	$(CXX) $(LD_FLAGS) -o magma.exe $(OBS)
 %.o:
 	$(CXX) $(CXX_FLAGS) -c $*.cpp -o $*.o
 

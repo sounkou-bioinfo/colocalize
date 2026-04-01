@@ -1,13 +1,13 @@
 #!/bin/sh
-THIS_DIR=$(dirname "$0")
 # install magma
+THIS_DIR=$(dirname "$0")
 cd "$THIS_DIR/inst/magma_v1" || exit
 THREADS=${THREADS:-1}
 CXX=`R CMD config CXX | cut -d ' ' -f1`
 # remove std flags that cause issues with magma compilation
 export CXX=$CXX
-make -j"$THREADS" magma
+make -j"$THREADS" magma.exe
 [[ -d "$THIS_DIR/inst/bin" ]] || mkdir "$THIS_DIR/inst/bin"
-cp -f magma "$THIS_DIR/inst/bin/magma"
+cp -f magma.exe "$THIS_DIR/inst/bin/magma.exe"
 # remove the  inst/magma_v1 directory after installation to save space
 rm -rf "$THIS_DIR/inst/magma_v1"
