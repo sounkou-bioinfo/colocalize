@@ -1,7 +1,7 @@
 qtl_group	ftp_path
-Glom.NephQTL2	./data-raw/QTL/eQTLs_chrAll_40_peers_cis1000kb_Glom.NephQTL2.tsv.bgz
-Tube.NephQTL2	./data-raw/QTL/eQTLs_chrAll_50_peers_cis1000kb_Tube.NephQTL2.tsv.bgz
-TGP_Cell_lines	./data-raw/QTLData/eQTL_FastQTL_results.nominal_pass.allAssociations.MAGE.v1.0.txt.gz
+Glom.NephQTL2	../../data-raw/eQTLs_chrAll_40_peers_cis1000kb_Glom.NephQTL2.tsv.bgz
+Tube.NephQTL2	../../data-raw/eQTLs_chrAll_50_peers_cis1000kb_Tube.NephQTL2.tsv.bgz
+TGP_Cell_lines	../../data-raw/eQTL_FastQTL_results.nominal_pass.allAssociations.MAGE.v1.0.txt.gz
 Adipose_Subcutaneous	http://ftp.ebi.ac.uk/pub/databases/spot/eQTL/imported/GTEx_V8/ge/Adipose_Subcutaneous.tsv.gz
 Adipose_Visceral_Omentum	http://ftp.ebi.ac.uk/pub/databases/spot/eQTL/imported/GTEx_V8/ge/Adipose_Visceral_Omentum.tsv.gz
 Adrenal_Gland	http://ftp.ebi.ac.uk/pub/databases/spot/eQTL/imported/GTEx_V8/ge/Adrenal_Gland.tsv.gz
