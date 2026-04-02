@@ -6,7 +6,7 @@ Authors@R:
 Description: This package provides utility functions to facilitate colocalization analyses between GWAS and QTL summary statistics. It
     includes utilities for data formating and harmonization, LD matrix computation, and visualization of colocalization results.
 Depends: R (>= 4.4.0)
-Imports: coloc, data.table, dplyr, ggplot2, reticulate, Rduckhts ( >= 1.1.4 ), vroom, rmarkdown, httr2, zen4R
+Imports: coloc, data.table, dplyr, ggplot2, reticulate, Rduckhts ( > 1.0.0), vroom, rmarkdown, httr2, zen4R
 Suggests: tinytest
 License: GPL (>= 3)
 Encoding: UTF-8
