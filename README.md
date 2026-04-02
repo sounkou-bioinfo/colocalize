@@ -4,6 +4,8 @@
 # coloclize
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/sounkou-bioinfo/colocalize/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/sounkou-bioinfo/colocalize/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of coloclize is to provide reproducible code for the
