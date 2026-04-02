@@ -1,0 +1,24 @@
+# coloclize
+
+The goal of coloclize is to provide reproducible code for the
+colocalization analysis of the paper …
+
+## Installation
+
+You can install the development version of coloclize like so:
+
+``` r
+remotes::install.packages("sounkou-bioinfo/colocalize")
+```
+
+# Package index
+
+## All functions
+
+- [`magma_exec()`](https://sounkou-bioinfo.github.io/colocalize/reference/magma_exec.md)
+  : magma executable path
+- [`make_flames_venv()`](https://sounkou-bioinfo.github.io/colocalize/reference/make_flames_venv.md)
+  : make FLAMES python package venv
+- [`make_pops_venv()`](https://sounkou-bioinfo.github.io/colocalize/reference/make_pops_venv.md)
+  : make pops python package venv
+
