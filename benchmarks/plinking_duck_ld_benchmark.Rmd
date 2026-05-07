@@ -257,7 +257,7 @@ all_hg38_compare$rss_delta_mb <- all_hg38_compare$max_rss_mb_fork - all_hg38_com
 knitr::kable(all_hg38_compare, digits = 3)
 ```
 
-Note: this full-resource run is dominated by loading/parsing full all-hg38 variant metadata; the fork's regional genotype-cache speedup is visible on bounded regions but is not sufficient to overcome the current all-PVAR metadata load at this scale. This identifies the next optimization target: region-pushdown PVAR loading for `plink_ld()`.
+Note: the fork now uses native PVAR region pushdown for `plink_ld()` when a `region` is supplied. On the real all-hg38 resource this cuts peak RSS substantially by materializing only the target interval's metadata; elapsed time is now dominated by the LD kernel / pgenlib reader state rather than all-PVAR string materialization.
 
 ## Output agreement
 
