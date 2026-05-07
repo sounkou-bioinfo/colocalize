@@ -18,3 +18,4 @@ You can install the development version of coloclize like so:
 ``` r
 remotes::install.packages("sounkou-bioinfo/colocalize")
 ```
+# PostGWAS
