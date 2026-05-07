@@ -221,24 +221,24 @@ knitr::kable(raw[, c("scenario", "repo", "rep", "status", "elapsed_sec", "user_s
 
 | scenario      | repo     | rep | status | elapsed_sec | user_sec | sys_sec | cpu_percent | max_rss_mb |
 |:--------------|:---------|----:|-------:|------------:|---------:|--------:|------------:|-----------:|
-| count_pairs   | upstream |   1 |      0 |        5.38 |    98.61 |    0.31 |        1836 |    348.656 |
-| count_pairs   | upstream |   2 |      0 |        6.67 |   121.27 |    0.33 |        1821 |    348.113 |
-| count_pairs   | upstream |   3 |      0 |        6.69 |   122.99 |    0.33 |        1842 |    348.484 |
-| count_pairs   | fork     |   1 |      0 |        1.69 |    28.45 |    0.19 |        1695 |    429.820 |
-| count_pairs   | fork     |   2 |      0 |        1.68 |    27.65 |    0.24 |        1660 |    429.617 |
-| count_pairs   | fork     |   3 |      0 |        1.72 |    26.67 |    0.21 |        1556 |    430.129 |
-| sum_r2        | upstream |   1 |      0 |        6.66 |   122.67 |    0.34 |        1846 |    348.129 |
-| sum_r2        | upstream |   2 |      0 |        6.67 |   122.85 |    0.36 |        1846 |    348.141 |
-| sum_r2        | upstream |   3 |      0 |        6.80 |   123.73 |    0.33 |        1823 |    348.262 |
-| sum_r2        | fork     |   1 |      0 |        1.66 |    28.15 |    0.19 |        1701 |    429.699 |
-| sum_r2        | fork     |   2 |      0 |        1.68 |    28.40 |    0.22 |        1696 |    429.855 |
-| sum_r2        | fork     |   3 |      0 |        1.68 |    28.42 |    0.19 |        1696 |    429.883 |
-| sum_r2_dprime | upstream |   1 |      0 |        6.74 |   124.10 |    0.36 |        1846 |    348.059 |
-| sum_r2_dprime | upstream |   2 |      0 |        6.79 |   124.78 |    0.36 |        1842 |    348.312 |
-| sum_r2_dprime | upstream |   3 |      0 |        6.82 |   124.73 |    0.34 |        1832 |    347.762 |
-| sum_r2_dprime | fork     |   1 |      0 |        1.69 |    28.66 |    0.21 |        1699 |    430.234 |
-| sum_r2_dprime | fork     |   2 |      0 |        1.67 |    28.26 |    0.21 |        1699 |    430.332 |
-| sum_r2_dprime | fork     |   3 |      0 |        1.69 |    28.30 |    0.22 |        1686 |    429.941 |
+| count_pairs   | upstream |   1 |      0 |        5.54 |   101.47 |    0.33 |        1836 |    348.406 |
+| count_pairs   | upstream |   2 |      0 |        6.81 |   123.53 |    0.33 |        1818 |    348.043 |
+| count_pairs   | upstream |   3 |      0 |        6.81 |   125.40 |    0.35 |        1846 |    348.430 |
+| count_pairs   | fork     |   1 |      0 |        1.68 |    28.36 |    0.25 |        1694 |    429.668 |
+| count_pairs   | fork     |   2 |      0 |        1.69 |    28.59 |    0.19 |        1698 |    429.828 |
+| count_pairs   | fork     |   3 |      0 |        1.68 |    28.40 |    0.23 |        1700 |    429.605 |
+| sum_r2        | upstream |   1 |      0 |        7.17 |   126.19 |    0.38 |        1765 |    348.633 |
+| sum_r2        | upstream |   2 |      0 |        7.18 |   130.49 |    0.40 |        1823 |    348.652 |
+| sum_r2        | upstream |   3 |      0 |        7.20 |   130.66 |    0.40 |        1819 |    348.512 |
+| sum_r2        | fork     |   1 |      0 |        1.97 |    29.35 |    0.24 |        1500 |    429.723 |
+| sum_r2        | fork     |   2 |      0 |        2.22 |    29.27 |    0.21 |        1327 |    429.688 |
+| sum_r2        | fork     |   3 |      0 |        2.04 |    29.27 |    0.22 |        1439 |    429.730 |
+| sum_r2_dprime | upstream |   1 |      0 |        8.35 |   129.80 |    0.37 |        1558 |    348.457 |
+| sum_r2_dprime | upstream |   2 |      0 |        6.83 |   125.45 |    0.37 |        1841 |    348.473 |
+| sum_r2_dprime | upstream |   3 |      0 |        6.80 |   125.49 |    0.31 |        1849 |    349.016 |
+| sum_r2_dprime | fork     |   1 |      0 |        1.71 |    28.84 |    0.22 |        1693 |    430.184 |
+| sum_r2_dprime | fork     |   2 |      0 |        1.70 |    28.75 |    0.24 |        1701 |    430.211 |
+| sum_r2_dprime | fork     |   3 |      0 |        1.68 |    28.45 |    0.21 |        1702 |    429.910 |
 
 ## Summary and speedup
 
@@ -251,12 +251,12 @@ knitr::kable(summary[, c("scenario", "repo", "n", "median_elapsed_sec", "min_ela
 
 |                       | scenario      | repo     |   n | median_elapsed_sec | min_elapsed_sec | median_max_rss_mb | median_cpu_percent |
 |:----------------------|:--------------|:---------|----:|-------------------:|----------------:|------------------:|-------------------:|
-| count_pairsfork       | count_pairs   | fork     |   3 |               1.69 |            1.68 |           429.820 |               1660 |
-| count_pairsupstream   | count_pairs   | upstream |   3 |               6.67 |            5.38 |           348.484 |               1836 |
-| sum_r2fork            | sum_r2        | fork     |   3 |               1.68 |            1.66 |           429.855 |               1696 |
-| sum_r2upstream        | sum_r2        | upstream |   3 |               6.67 |            6.66 |           348.141 |               1846 |
-| sum_r2_dprimefork     | sum_r2_dprime | fork     |   3 |               1.69 |            1.67 |           430.234 |               1699 |
-| sum_r2_dprimeupstream | sum_r2_dprime | upstream |   3 |               6.79 |            6.74 |           348.059 |               1842 |
+| count_pairsfork       | count_pairs   | fork     |   3 |               1.68 |            1.68 |           429.668 |               1698 |
+| count_pairsupstream   | count_pairs   | upstream |   3 |               6.81 |            5.54 |           348.406 |               1836 |
+| sum_r2fork            | sum_r2        | fork     |   3 |               2.04 |            1.97 |           429.723 |               1439 |
+| sum_r2upstream        | sum_r2        | upstream |   3 |               7.18 |            7.17 |           348.633 |               1819 |
+| sum_r2_dprimefork     | sum_r2_dprime | fork     |   3 |               1.70 |            1.68 |           430.184 |               1701 |
+| sum_r2_dprimeupstream | sum_r2_dprime | upstream |   3 |               6.83 |            6.80 |           348.473 |               1841 |
 
 ``` r
 up <- summary[summary$repo == "upstream", c("scenario", "median_elapsed_sec", "median_max_rss_mb")]
@@ -271,9 +271,69 @@ knitr::kable(compare, digits = 3)
 
 | scenario      | upstream_elapsed | upstream_rss | fork_elapsed | fork_rss | speedup_x | rss_delta_mb |
 |:--------------|-----------------:|-------------:|-------------:|---------:|----------:|-------------:|
-| count_pairs   |             6.67 |      348.484 |         1.69 |  429.820 |     3.947 |       81.336 |
-| sum_r2        |             6.67 |      348.141 |         1.68 |  429.855 |     3.970 |       81.715 |
-| sum_r2_dprime |             6.79 |      348.059 |         1.69 |  430.234 |     4.018 |       82.176 |
+| count_pairs   |             6.81 |      348.406 |         1.68 |  429.668 |     4.054 |       81.262 |
+| sum_r2        |             7.18 |      348.633 |         2.04 |  429.723 |     3.520 |       81.090 |
+| sum_r2_dprime |             6.83 |      348.473 |         1.70 |  430.184 |     4.018 |       81.711 |
+
+## Full all_hg38 1000G benchmark (real large resource)
+
+This run uses the real full-resource files at repository root:
+
+- `./all_hg38.pgen.zst` as the source PGEN (decompressed to
+  `./all_hg38.pgen` because pgenlib rejects `.pgen.zst` magic bytes)
+- `./all_hg38_rs.pvar.zst` as the source PVAR, with
+  `./all_hg38_rs.slim.pvar` derived by retaining the real
+  `#CHROM POS ID REF ALT` columns and dropping the huge INFO field
+- `./hg38_corrected.psam` as sample metadata
+
+The benchmark interval is `22:11300000-16300000` (~5 Mb; 91,882
+variants), with a 100 kb LD window and `r2_threshold = 0.2`. This is
+intentionally much larger than the earlier 100 kb smoke benchmark and
+exercises the full all-hg38 PGEN/PVAR metadata scale. The CSV below is
+produced from the `/usr/bin/time -v` run; re-running it takes several
+minutes and requires the decompressed 8.9 GB PGEN plus the 2.0 GB slim
+PVAR.
+
+Commands used to prepare real inputs (not committed because they are
+large):
+
+``` sh
+zstd -T0 -d -k all_hg38.pgen.zst -o all_hg38.pgen
+zstd -dc -T0 all_hg38_rs.pvar.zst | \
+  awk 'BEGIN{FS=OFS="\t"} /^##/ {next} /^#CHROM/ {print "#CHROM","POS","ID","REF","ALT"; next} !/^#/ {print $1,$2,$3,$4,$5}' \
+  > all_hg38_rs.slim.pvar
+```
+
+``` r
+all_hg38 <- read.csv(file.path("benchmarks", "plinking_duck_ld_benchmark_all_hg38.csv"))
+knitr::kable(all_hg38, digits = 3)
+```
+
+| repo     | local_head | scenario           | source_pgen_zst   | pgen          | pvar                  | psam                | region               | variant_ct | window_kb | r2_threshold | n_pairs | sum_r2 | elapsed_sec | user_sec | sys_sec | cpu_percent | max_rss_mb |
+|:---------|:-----------|:-------------------|:------------------|:--------------|:----------------------|:--------------------|:---------------------|-----------:|----------:|-------------:|--------:|-------:|------------:|---------:|--------:|------------:|-----------:|
+| upstream | 49eab7b    | all_hg38_chr22_5mb | all_hg38.pgen.zst | all_hg38.pgen | all_hg38_rs.slim.pvar | hg38_corrected.psam | 22:11300000-16300000 |      91882 |       100 |          0.2 | 1270300 | 709755 |      149.93 |  2552.85 |   23.13 |        1718 |   21867.73 |
+| fork     | 5c7c2f1    | all_hg38_chr22_5mb | all_hg38.pgen.zst | all_hg38.pgen | all_hg38_rs.slim.pvar | hg38_corrected.psam | 22:11300000-16300000 |      91882 |       100 |          0.2 | 1270300 | 709755 |      153.94 |  2576.32 |   19.02 |        1685 |   21863.49 |
+
+``` r
+all_hg38_compare <- merge(
+  all_hg38[all_hg38$repo == "upstream", c("scenario", "elapsed_sec", "max_rss_mb")],
+  all_hg38[all_hg38$repo == "fork", c("scenario", "elapsed_sec", "max_rss_mb")],
+  by = "scenario", suffixes = c("_upstream", "_fork")
+)
+all_hg38_compare$speedup_x <- all_hg38_compare$elapsed_sec_upstream / all_hg38_compare$elapsed_sec_fork
+all_hg38_compare$rss_delta_mb <- all_hg38_compare$max_rss_mb_fork - all_hg38_compare$max_rss_mb_upstream
+knitr::kable(all_hg38_compare, digits = 3)
+```
+
+| scenario           | elapsed_sec_upstream | max_rss_mb_upstream | elapsed_sec_fork | max_rss_mb_fork | speedup_x | rss_delta_mb |
+|:-------------------|---------------------:|--------------------:|-----------------:|----------------:|----------:|-------------:|
+| all_hg38_chr22_5mb |               149.93 |            21867.73 |           153.94 |        21863.49 |     0.974 |       -4.242 |
+
+Note: this full-resource run is dominated by loading/parsing full
+all-hg38 variant metadata; the fork’s regional genotype-cache speedup is
+visible on bounded regions but is not sufficient to overcome the current
+all-PVAR metadata load at this scale. This identifies the next
+optimization target: region-pushdown PVAR loading for `plink_ld()`.
 
 ## Output agreement
 
@@ -282,14 +342,14 @@ outputs <- summary[, c("scenario", "repo", "output")]
 knitr::kable(outputs)
 ```
 
-|                       | scenario      | repo     | output                                                                        |
-|:----------------------|:--------------|:---------|:------------------------------------------------------------------------------|
-| count_pairsfork       | count_pairs   | fork     | count_star(); 42258                                                           |
-| count_pairsupstream   | count_pairs   | upstream | count_star(); 42258                                                           |
-| sum_r2fork            | sum_r2        | fork     | sum(R2); 26135.51331225653                                                    |
-| sum_r2upstream        | sum_r2        | upstream | sum(R2); 26135.513312256524                                                   |
-| sum_r2_dprimefork     | sum_r2_dprime | fork     | count_star(),sum(R2),sum(D_PRIME); 42258,26135.51331225652,19214.231785830205 |
-| sum_r2_dprimeupstream | sum_r2_dprime | upstream | count_star(),sum(R2),sum(D_PRIME); 42258,26135.513312256524,19214.23178583016 |
+|                       | scenario      | repo     | output                                                                         |
+|:----------------------|:--------------|:---------|:-------------------------------------------------------------------------------|
+| count_pairsfork       | count_pairs   | fork     | count_star(); 42258                                                            |
+| count_pairsupstream   | count_pairs   | upstream | count_star(); 42258                                                            |
+| sum_r2fork            | sum_r2        | fork     | sum(R2); 26135.51331225653                                                     |
+| sum_r2upstream        | sum_r2        | upstream | sum(R2); 26135.51331225654                                                     |
+| sum_r2_dprimefork     | sum_r2_dprime | fork     | count_star(),sum(R2),sum(D_PRIME); 42258,26135.51331225651,19214.2317858302    |
+| sum_r2_dprimeupstream | sum_r2_dprime | upstream | count_star(),sum(R2),sum(D_PRIME); 42258,26135.513312256524,19214.231785830187 |
 
 ## Signed R smoke test
 
@@ -308,10 +368,10 @@ signed <- rbind(
 knitr::kable(signed[, c("repo", "status", "elapsed_sec", "max_rss_mb", "stdout", "stderr_tail")], digits = 3)
 ```
 
-| repo     | status | elapsed_sec | max_rss_mb | stdout                                                                                              | stderr_tail                                                                                                                                                                                                                                                                                                                                                               |
-|:---------|-------:|------------:|-----------:|:----------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| upstream |      1 |        0.16 |    204.832 |                                                                                                     | Binder Error: Referenced column “R” not found in FROM clause!Major (requiring I/O) page faults: 0Minor (reclaiming a frame) page faults: 48794Voluntary context switches: 71Involuntary context switches: 7Swaps: 0File system inputs: 0File system outputs: 8Socket messages sent: 0Socket messages received: 0Signals delivered: 0Page size (bytes): 4096Exit status: 1 |
-| fork     |      0 |        1.60 |    204.844 | R,R2,0.6664583333333333,0.6664583333333333,0.6664583333333333,0.6664583333333333,0.6664583333333333 | Major (requiring I/O) page faults: 0Minor (reclaiming a frame) page faults: 52635Voluntary context switches: 124Involuntary context switches: 8Swaps: 0File system inputs: 0File system outputs: 8Socket messages sent: 0Socket messages received: 0Signals delivered: 0Page size (bytes): 4096Exit status: 0                                                             |
+| repo     | status | elapsed_sec | max_rss_mb | stdout                                                                                              | stderr_tail                                                                                                                                                                                                                                                                                                                                                                |
+|:---------|-------:|------------:|-----------:|:----------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| upstream |      1 |        0.16 |    204.523 |                                                                                                     | Binder Error: Referenced column “R” not found in FROM clause!Major (requiring I/O) page faults: 0Minor (reclaiming a frame) page faults: 48799Voluntary context switches: 69Involuntary context switches: 10Swaps: 0File system inputs: 0File system outputs: 8Socket messages sent: 0Socket messages received: 0Signals delivered: 0Page size (bytes): 4096Exit status: 1 |
+| fork     |      0 |        1.61 |    204.844 | R,R2,0.6664583333333333,0.6664583333333333,0.6664583333333333,0.6664583333333333,0.6664583333333333 | Major (requiring I/O) page faults: 0Minor (reclaiming a frame) page faults: 52641Voluntary context switches: 133Involuntary context switches: 15Swaps: 0File system inputs: 0File system outputs: 8Socket messages sent: 0Socket messages received: 0Signals delivered: 0Page size (bytes): 4096Exit status: 0                                                             |
 
 ## Population-weighted LD smoke benchmark
 
@@ -331,9 +391,9 @@ weighted_display$stdout <- gsub("\\n", "; ", weighted_display$stdout, fixed = TR
 knitr::kable(weighted_display[, c("label", "status", "elapsed_sec", "user_sec", "sys_sec", "cpu_percent", "max_rss_mb", "stdout")], digits = 3)
 ```
 
-| label                    | status | elapsed_sec | user_sec | sys_sec | cpu_percent | max_rss_mb | stdout                                                         |
-|:-------------------------|-------:|------------:|---------:|--------:|------------:|-----------:|:---------------------------------------------------------------|
-| fork:population_weighted |      0 |        9.54 |   170.66 |    0.24 |        1791 |    430.371 | n_pairs,sum_r2,sum_r; 41353,26317.2512828859,32140.66769007975 |
+| label                    | status | elapsed_sec | user_sec | sys_sec | cpu_percent | max_rss_mb | stdout                                                           |
+|:-------------------------|-------:|------------:|---------:|--------:|------------:|-----------:|:-----------------------------------------------------------------|
+| fork:population_weighted |      0 |        9.22 |   171.05 |    0.22 |        1857 |     430.32 | n_pairs,sum_r2,sum_r; 41353,26317.251282885907,32140.66769007974 |
 
 ## PLINK2 CLI reference point
 
@@ -373,9 +433,9 @@ if (nrow(plink2_raw)) {
 
 | scenario          | repo   | rep | status | elapsed_sec | user_sec | sys_sec | cpu_percent | max_rss_mb |
 |:------------------|:-------|----:|-------:|------------:|---------:|--------:|------------:|-----------:|
-| plink2_r_unphased | plink2 |   1 |      0 |        0.18 |     0.72 |    0.06 |         425 |    239.062 |
-| plink2_r_unphased | plink2 |   2 |      0 |        0.18 |     0.73 |    0.07 |         440 |    239.062 |
-| plink2_r_unphased | plink2 |   3 |      0 |        0.18 |     0.73 |    0.07 |         451 |    239.844 |
+| plink2_r_unphased | plink2 |   1 |      0 |        0.18 |     0.67 |    0.08 |         421 |     240.00 |
+| plink2_r_unphased | plink2 |   2 |      0 |        0.16 |     0.64 |    0.07 |         434 |     236.25 |
+| plink2_r_unphased | plink2 |   3 |      0 |        0.18 |     0.68 |    0.06 |         413 |     236.25 |
 
 ## Notes
 

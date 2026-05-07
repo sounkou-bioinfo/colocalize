@@ -219,6 +219,46 @@ compare$rss_delta_mb <- compare$fork_rss - compare$upstream_rss
 knitr::kable(compare, digits = 3)
 ```
 
+## Full all_hg38 1000G benchmark (real large resource)
+
+This run uses the real full-resource files at repository root:
+
+- `./all_hg38.pgen.zst` as the source PGEN (decompressed to `./all_hg38.pgen` because pgenlib rejects `.pgen.zst` magic bytes)
+- `./all_hg38_rs.pvar.zst` as the source PVAR, with `./all_hg38_rs.slim.pvar` derived by retaining the real `#CHROM POS ID REF ALT` columns and dropping the huge INFO field
+- `./hg38_corrected.psam` as sample metadata
+
+The benchmark interval is `22:11300000-16300000` (~5 Mb; 91,882 variants),
+with a 100 kb LD window and `r2_threshold = 0.2`. This is intentionally much
+larger than the earlier 100 kb smoke benchmark and exercises the full all-hg38
+PGEN/PVAR metadata scale. The CSV below is produced from the `/usr/bin/time -v`
+run; re-running it takes several minutes and requires the decompressed 8.9 GB
+PGEN plus the 2.0 GB slim PVAR.
+
+Commands used to prepare real inputs (not committed because they are large):
+
+```sh
+zstd -T0 -d -k all_hg38.pgen.zst -o all_hg38.pgen
+zstd -dc -T0 all_hg38_rs.pvar.zst | \
+  awk 'BEGIN{FS=OFS="\t"} /^##/ {next} /^#CHROM/ {print "#CHROM","POS","ID","REF","ALT"; next} !/^#/ {print $1,$2,$3,$4,$5}' \
+  > all_hg38_rs.slim.pvar
+```
+
+```{r all-hg38-bench-results}
+all_hg38 <- read.csv(file.path("benchmarks", "plinking_duck_ld_benchmark_all_hg38.csv"))
+knitr::kable(all_hg38, digits = 3)
+
+all_hg38_compare <- merge(
+  all_hg38[all_hg38$repo == "upstream", c("scenario", "elapsed_sec", "max_rss_mb")],
+  all_hg38[all_hg38$repo == "fork", c("scenario", "elapsed_sec", "max_rss_mb")],
+  by = "scenario", suffixes = c("_upstream", "_fork")
+)
+all_hg38_compare$speedup_x <- all_hg38_compare$elapsed_sec_upstream / all_hg38_compare$elapsed_sec_fork
+all_hg38_compare$rss_delta_mb <- all_hg38_compare$max_rss_mb_fork - all_hg38_compare$max_rss_mb_upstream
+knitr::kable(all_hg38_compare, digits = 3)
+```
+
+Note: this full-resource run is dominated by loading/parsing full all-hg38 variant metadata; the fork's regional genotype-cache speedup is visible on bounded regions but is not sufficient to overcome the current all-PVAR metadata load at this scale. This identifies the next optimization target: region-pushdown PVAR loading for `plink_ld()`.
+
 ## Output agreement
 
 ```{r output-agreement}
